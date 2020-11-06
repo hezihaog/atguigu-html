@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>03.伪元素</title>
+		<style type="text/css">
+			/* 
+				使用伪元素来表示元素中的一些特殊位置
+			 */
+			
+			/* 
+				为段落p中的第一个字符设置一个特殊样式
+			 */
+			p::first-letter {
+				color: red;
+				font-size: 20px;
+			}
+			
+			/* 
+				为段落p中的第一行设置一个背景颜色为黄色
+			 */
+			p::first-line {
+				background-color: yellow;
+			}
+			
+			/* 
+				before表示元素的最前边的部分
+				一般before都需要结合content这个样式一起使用
+				通过content可以向before或after位置添加一些内容
+				注意：必须加双引号""包裹文字，否则不生效
+			 */
+			p::before {
+				content: "我会出现在整个段落的最前边";
+				color: red;
+			}
+			
+			p::after {
+				content: "我会出现在整个段落的最后边";
+				color: orange;
+			}
+		</style>
+	</head>
+	<body>
+		<p>
+			鲁迅一生在文学创作、文学批评、思想研究、文学史研究、翻译、美术理论引进、基础科学介绍和古籍校勘与研究等多个领域具有重大贡献。他对于五四运动以后的中国社会思想文化发展具有重大影响，蜚声世界文坛，尤其在韩国、日本思想文化领域有极其重要的地位和影响，被誉为“二十世纪东亚文化地图上占最大领土的作家”。
+		</p>
+	</body>
+</html>

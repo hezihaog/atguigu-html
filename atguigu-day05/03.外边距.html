@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>03.外边距</title>
+		<style type="text/css">
+			.box1 {
+				width: 200px;
+				height: 200px;
+				background-color: #bfa;
+				border: 10px red solid;
+				
+				/* 
+					外边距指的是当前盒子与其他盒子之间的距离
+						不会影响可见框的大小，而是会影响到盒子的位置
+					盒子有4个方向的外边距
+						margin-top
+						margin-right
+						margin-bottom
+						margin-left
+				 */
+				
+				/* 
+					设置box1的上外边距，就是盒子上边框和其他盒子的距离
+					由于页面中的元素都是靠左摆放的
+						所以注意我们设置上、左外边距时，会导致盒子自身的位置发生改变
+						而如果是设置右、下外边距，会改变其他盒子的距离
+				 */
+				margin-top: 100px;
+				
+				/* 
+					左外边距
+				 */
+				margin-left: 100px;
+				
+				/* 右外边距 */
+				margin-right: 100px;
+				
+				/* 下外边距 */
+				margin-bottom: 100px;
+				
+				/* 
+					外边距，也设置一个负值
+						如果外边距设置一个负值，则元素会向反方向移动
+				 */
+				/* margin-left: -100px; */
+				/* margin-top: -100px; */
+				
+				/* 
+					margin还可以设置为auto，auto一般只设置给水平方向的margin
+						如果只指定左外边距，或右边距为auto，则会将外边距距离设置为最大值
+						垂直方向的外边距，设置auto，则外边距默就是0
+						
+					如果将left和right同时设置为auto，则会将两侧的外边距设置为相同的值
+						就可以使元素自动在父元素中居中，所以我们经常将左右外边距设置为auto
+						以使子元素在父元素中水平居中
+				 */
+				margin-left: auto;
+				margin-right: auto;
+				
+				/* 
+					外边距同样可以使用简写属性margin，可以同时设置4个方向的外边距
+					规则和padding一样
+				 */
+				margin: 10px 20px 30px 40px;
+				/* 上10，左右20，下30 */
+				margin: 10px 20px 30px;
+				/* 上下10，左右20 */
+				margin: 10px 20px;
+				/* 上下左右都是10 */
+				margin: 10px;
+				/* 上下0，左右auto */
+				margin: 0 auto;
+			}
+			
+			.box2 {
+				width: 200px;
+				height: 200px;
+				background-color: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1"></div>
+		<div class="box2"></div>
+	</body>
+</html>

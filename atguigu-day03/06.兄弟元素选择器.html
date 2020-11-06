@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>06.兄弟元素选择器</title>
+		<style type="text/css">
+			/* 
+				需求：为span后的一个p元素设置一个背景颜色为黄色
+				span + p
+					作用：选中指定元素的后紧挨的指定兄弟选择器（不能有其他元素间隔）
+					语法：前一个 + 后一个
+			 */
+			span + p {
+				background-color: yellow;
+			}
+			
+			/* 
+				选中后边的所有兄弟元素
+					语法：前一个 ~ 后一个
+			 */
+			span ~ p {
+				background-color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<p>我是一个p标签</p>
+		<p>我是一个p标签</p>
+		<p>我是一个p标签</p>
+		<span>我是一个span标签</span>
+		<p>我是一个p标签</p>
+		<p>我是一个p标签</p>
+		<p>我是一个p标签</p>
+	</body>
+</html>

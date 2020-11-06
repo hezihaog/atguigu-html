@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>03.长表格</title>
+	</head>
+	<body>
+		<table>
+			<!-- 
+				长表格
+					有一些情况下，表格是非常长的
+					这时就需要将表格分为3个部分，表头、表格的主体、表格的底部
+				在HTML中，为我们提供了3个标签
+					thread 表头
+					tbody 表格主体
+					tfoot 表格底部
+				这3个标签，就是用来区分表格的不同部分，他们都是table的子标签
+					都需要直接写到table中，tr需要写在这些标签中
+					
+				thead中的内容，永远都会显示在表格的头部
+				tbody中内容，永远都会显示在表格的中间
+				tfoot中内容，永远都会显示在表格的底部
+				
+				如果表格中，没有写tbody，浏览器会在表格中自动添加tbody
+					并且将所有的tr都放到tbody中，所以注意tr并不是table的子元素，而是tbody的子元素
+					通过table > tr，无法选中行，需要通过tbody > tr来选中行
+			 -->
+			 <thead>
+				 <tr>
+					 <th>日期</th>
+					 <th>收入</th>
+					 <th>支出</th>
+					 <th>合计</th>
+				 </tr>
+			 </thead>
+			 
+			 <tfoot>
+			 				 <tr>
+			 					 <td></td>
+			 					 <td></td>
+			 					 <td>合计</td>
+			 					 <td>100</td>
+			 				 </tr>
+			 </tfoot>
+			 
+			 <tbody>
+			 	<tr>
+					<td>10.24</td>
+					<td>500</td>
+					<td>300</td>
+					<td>200</td>
+				</tr>
+				<tr>
+					<td>10.24</td>
+					<td>500</td>
+					<td>300</td>
+					<td>200</td>
+				</tr>
+				<tr>
+					<td>10.24</td>
+					<td>500</td>
+					<td>300</td>
+					<td>200</td>
+				</tr>
+				<tr>
+					<td>10.24</td>
+					<td>500</td>
+					<td>300</td>
+					<td>200</td>
+				</tr>
+				<tr>
+					<td>10.24</td>
+					<td>500</td>
+					<td>300</td>
+					<td>200</td>
+				</tr>
+			 </tbody>
+		</table>
+	</body>
+</html>

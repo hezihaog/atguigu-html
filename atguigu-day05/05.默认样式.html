@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>05.默认样式</title>
+		<style type="text/css">
+			/* 
+				浏览器为页面中没有样式时，也可以让页面有一个比较好的显示效果
+					所以为很多元素都设置了一些默认的样式，magin、padding
+					而它的这些默认样式，正常情况下，我们都不需要使用
+					
+				所以我们往往在编写样式之前，都需要将浏览器中的默认margin、padding都去掉
+			 */
+			
+			
+			/* 
+				清除浏览器的默认样式
+			 */
+			/* body {
+				margin: 0;
+			}
+			
+			p {
+				margin: 0;
+			}
+			
+			ul {
+				margin: 0;
+				padding: 0;
+			} */
+			
+			/* 
+				上面一个个设置太麻烦了，使用通配符来统一设置就可以了
+			 */
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.box1 {
+				width: 100px;
+				height: 100px;
+				background-color: #bfa;
+			}
+			
+			p {
+				background-color: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1"></div>
+		<p>我是一个段落</p>
+		<p>我是一个段落</p>
+		<p>我是一个段落</p>
+		
+		<ul>
+			<li>无序列表</li>
+			<li>无序列表</li>
+			<li>无序列表</li>
+		</ul>
+	</body>
+</html>

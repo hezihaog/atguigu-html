@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>05.字体的分类</title>
+		<style type="text/css">
+			/* 如果前边的字体都没有，就选一个serif衬线字体来使用 */
+			p {
+				font-family: arial, "微软雅黑", 华文彩云, serif;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 
+			在网页中将字体分成5大类:
+				serif (衬线字体)
+				sans-serif (非衬线字体)
+				monospace (等宽字体)
+				cursive (草书字体)
+				fantasy (虚幻字体)
+			可以将字体设置为这些大的分类，当设置为大的分类时
+				浏览器会自动选择指定的字体，并应用样式
+				
+			一般会将字体的大分类，指定为font-family中的最后一个字体
+			
+			一般我们都选用衬线字体和非衬线字体，其他分类在浏览器的理解和支持都不是很好，基本都不统一
+		 -->
+		 <p style="font-size: 20px; font-family: serif;">
+		 	衬线字体，我是一段文字，IHABCDEFGabcdfg
+		 </p>
+		 
+		 <p style="font-size: 20px; font-family: sans-serif;">
+		 	非衬线字体，我是一段文字，IHABCDEFGabcdfg
+		 </p>
+		 
+		 <p style="font-size: 20px; font-family: monospace;">
+		 	等宽字体，我是一段文字，IHABCDEFGabcdfg
+		 </p>
+		 
+		 <p style="font-size: 20px; font-family: cursive;">
+		 	草书字体，我是一段文字，IHABCDEFGabcdfg
+		 </p>
+		 
+		 <p style="font-size: 20px; font-family: fantasy;">
+		 	虚幻字体，我是一段文字，IHABCDEFGabcdfg
+		 </p>
+	</body>
+</html>

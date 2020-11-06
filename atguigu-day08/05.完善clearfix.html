@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>05.完善clearfix</title>
+		<style type="text/css">
+			.box1 {
+				width: 300px;
+				height: 300px;
+				background-color: #bfa;
+			}
+			
+			.box2 {
+				width: 200px;
+				height: 200px;
+				background-color: yellow;
+				
+				/* 
+					子元素和父元素相邻的垂直外边距会发生重叠，子元素的外边距会传递给父元素
+					使用空的table标签，可以隔离父子元素的外边距，阻止外边距的重叠
+				 */
+				margin-top: 100px;
+			}
+			
+			.box3 {
+				border: 10px red solid;
+			}
+			
+			.box4 {
+				width: 100px;
+				height: 100px;
+				background-color: yellowgreen;
+				/* 子元素浮动，脱离文档流，不能撑开父元素高度，造成父元素的高度塌陷 */
+				float: left;
+			}
+			
+			/*
+				解决父元素的外边距重叠
+					设置，display：table，可以将一个元素设置为表格显示
+					在父元素的内容最前边，插入一个空的table
+			 */
+			/* .box1::before {
+				content: "";
+				display: table;
+			} */
+			
+			/* 
+				解决父元素高度塌陷
+			 */
+			/* .clearfix::after {
+				content: "";
+				display: block;
+				clear: both;
+			} */
+			
+			/* 
+				经过修改后的clearfix
+					既可以解决高度塌陷问题，也可以解决外边距重叠问题
+			 */
+			.clearfix::before,
+			.clearfix::after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+			
+			/* 兼容IE6的高度塌陷问题 */
+			.clearfix {
+				zoom: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box3 clearfix">
+			<div class="box4"></div>
+		</div>
+		
+		<div class="box1 clearfix">
+			<div class="box2"></div>
+		</div>
+	</body>
+</html>

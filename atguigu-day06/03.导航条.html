@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>03.导航条</title>
+		<style type="text/css">
+			/* 清除默认样式 */
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			/* 设置ul */
+			.nav {
+				/* 去除项目列表的符号 */
+				list-style: none;
+				/* 设置一个宽度 */
+				/* 在IE6中，如果为元素指定了一个宽度，则会默认开启hasLayout */
+				width: 1000px;
+				/* 设置元素居中 */
+				margin: 50px auto;\
+				/* 解决高度塌陷问题！子元素都浮动了，无法撑开父元素了 */
+				overflow: hidden;
+				zoom: 1;
+			}
+			
+			/* 设置li */
+			.nav li {
+				/* 设置li向左浮动 */
+				float: left;
+				/* 每个列表项占4分之一 */
+				/* width: 25%; */
+				width: 12.5%;
+			}
+			
+			/* 设置li中超链接 */
+			.nav li a {
+				/* 将超链接从行内元素转换为块元素，才可以指定宽、高 */
+				display: block;
+				/* 沾满父元素（列表项）的宽度 */
+				width: 100%;
+				/* 为导航条设置背景颜色 */
+				background-color: #6495ED;
+				/* 设置文字居中 */
+				text-align: center;
+				/* 设置上、下内边距 */
+				padding: 5px 0px;
+				/* 去掉下划线 */
+				text-decoration: none;
+				/* 设置字体颜色 */
+				color: white;
+				/* 设置加粗 */
+				font-weight: bold;
+				/* 设置统一字体 */
+				font-family: "微软雅黑", arial;
+			}
+			
+			.nav a:hover {
+				/* 设置鼠标移入效果 */
+				background-color: #CC0000;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 创建导航条结构 -->
+		<ul class="nav">
+			<li>
+				<a href="#">首页</a>
+			</li>
+			<li>
+				<a href="#">新闻</a>
+			</li>
+			<li>
+				<a href="#">联系</a>
+			</li>
+			<li>
+				<a href="#">关于</a>
+			</li>
+			
+			<li>
+				<a href="#">首页</a>
+			</li>
+			<li>
+				<a href="#">新闻</a>
+			</li>
+			<li>
+				<a href="#">联系</a>
+			</li>
+			<li>
+				<a href="#">关于</a>
+			</li>
+		</ul>
+	</body>
+</html>

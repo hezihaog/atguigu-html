@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>06.表单</title>
+	</head>
+	<body>
+		<!-- 
+			表单的作用，就是将用户提交的信息，提交给服务器的
+				比如：百度的搜索框、注册、登录这些操作都需要填写表单
+		 -->
+
+		<!-- 
+			使用一个form标签创建一个表单
+				form标签中，必须指定一个action属性，该属性，指向的是一个服务器的地址
+		  -->
+		<form action="target.html">
+			<!-- 
+				使用form创建的仅仅是一个空白的菜单
+					我们还需要向form中添加不同的表单项
+			  -->
+
+			<!-- 
+				在表单中，可以使用fieldset来为表单项进行分组
+				可以将表单项中的同一组放到一个fieldset中
+			 -->
+			<fieldset>
+				<!-- 
+					在fieldset中可以使用legend子标签，来指定组名
+				 -->
+				<legend>用户信息</legend>
+				<!--
+						使用input来创建一个文本框，它的type属性是text
+							如果希望表单项中的数据会提交到服务器中，还必须给表单项指定一个name属性
+							name表示提交内容的名字
+						用户填写的信息会附在url地址的后边以查询字符串的形式发送给服务器
+							url地址?查询字符串
+						格式：
+							属性名=属性值&属性名=属性值
+						在文本框中也可以指定value属性，它会作为输入框的默认值
+				   -->
+				<!-- 
+						在HTML中，还为我们提供一个标签，专门用来选中表单中的提示文字
+						label标签：
+							该标签中，可以指定一个for属性，该属性的值需要指定一个表单项的id值
+					-->
+				<label for="um">用户名：</label>
+				<input id="um" type="text" name="username"><br>
+
+				<!-- 
+						密码框
+						使用input创建一个密码框，它的type属性是password
+				   -->
+				<label for="pwd">密码：</label>
+				<input id="pwd" type="password" name="passwrod"><br>
+			</fieldset>
+
+			<fieldset>
+				<legend>用户爱好</legend>
+				<!-- 
+					单选按钮
+						- 使用input创建一个单选按钮，它的type属性是radio
+						- 单选按钮通过name属性进行分组，name属性相同的为一组
+						- 像这种需要用户选择，但不需要用户添加内容的表单项，还需要指定一个value属性，这样被选中的表单项的value属性将会在最终提交时，提交给服务器
+						
+					如果希望在单选框或多选框中指定默认选中的选项
+						则可以在希望选中的项中，添加checked="checked"属性
+			   -->
+				性别：<input type="radio" name="gender" value="male" id="male">
+				<label for="male">男</label>
+				<input type="radio" name="gender" value="female" checked="checked" id="female">
+				<label for="female">女</label>
+				<br>
+
+				<!-- 
+					多选框
+						- 使用input创建一个多选框，它的type属性是checkbox
+				 -->
+				爱好：<input type="checkbox" name="hobby" value="zq">足球
+				<input type="checkbox" name="hobby" value="lq">篮球
+				<input type="checkbox" name="hobby" value="ymq" checked="checked">羽毛球
+				<input type="checkbox" name="hobby" value="ppq" checked="checked">兵乓球球
+				<br>
+			</fieldset>
+
+			<!-- 
+					下拉列表
+						- 使用select创建一个多选框
+						下拉列表的name属性，需要指定给select，而value属性需要指定给option
+					可以通过option中添加selected="selected"，来将选项设置为默认选中
+					
+					当给select添加一个multiple="multiple"属性时，则下拉列表变为一个多选的下拉列表
+				 -->
+			你喜欢的明星：<select name="star">
+				<!-- 
+					在select中可以使用optgroup标签，对选项进行分组
+						同一个optgroup中，选项是一组
+					可以通过label属性，指定分组的名字
+				-->
+				<optgroup label="女明星">
+					<!-- 下拉列表中，使用option标签来创建一个个的列表项 -->
+					<option value="fbb">范冰冰</option>
+					<option value="lxr">林心如</option>
+					<option value="zw">赵薇</option>
+				</optgroup>
+				<optgroup label="男明星">
+					<option value="ldh">刘德华</option>
+					<option value="pcj">潘长江</option>
+					<option value="zbs" selected="selected">赵本山</option>
+				</optgroup>
+			</select>
+
+			<br>
+
+			<!-- 
+					使用textarea创建一个文本域
+				 -->
+			自我介绍：<textarea name="info"></textarea>
+			<br>
+
+			<!-- 
+					提交按钮，可以将表单中的信息提交给服务器
+					使用input来创建一个提交按钮，它的type属性值是submit
+					通过value属性，指定按钮上的文字
+			   -->
+			<input type="submit" value="提交">
+			<!-- 
+					<input type="reset">，可以创建一个重置按钮
+						点击重置按钮，表单中的内容将会恢复为默认值
+				-->
+			<input type="reset" value="重置">
+
+			<!-- 
+					使用<input type="button">，可以创建一个单纯的按钮
+						这个按钮没有任何功能，只能被点击
+				-->
+			<input type="button" value="按钮">
+			<br><br>
+
+			<!-- 
+					除了使用input，也可以使用button标签来创建按钮
+						这种方式和input类型，只不过它是成对出现的标签
+							使用起来更加灵活
+				-->
+			<button type="submit">提交</button>
+			<button type="reset">重置</button>
+			<button type="button">按钮</button>
+		</form>
+	</body>
+</html>

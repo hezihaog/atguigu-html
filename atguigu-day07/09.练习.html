@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>09.练习</title>
+		<style type="text/css">
+			/* 
+				做完功能后发现，第一次切换图片时，图片会有一个非常快的闪烁
+					这次闪烁会导致一次不佳的用户体验
+				产生闪烁问题的原因：
+					背景图片是以外部资源的形式加载进网页的，浏览器每加载一个外部资源，就需要单独的发送一次请求
+					但是外部资源并不是同时加载的，浏览器会在资源被使用时，才去加载资源
+					这个练习，一上来只加载link的背景资源，由于hover和active状态没有马上触发
+						所以hover.png和activie.png并不是立即加载
+					当hover触发时，浏览器才去加载hover.png，active触发时，才去加载active.png
+					由于加载图片需要一定的时间，所以在加载和显示过程中会有一段时间，背景图片无法显示，导致闪烁的问题
+			 */
+			
+			.btn:link {
+				/* 将a转换为块元素 */
+				display: block;
+				/* 设置宽、高 */
+				width: 93px;
+				height: 29px;
+				/* 设置按钮背景图片 */
+				background-image: url(img/btn/link.png);
+				/* 设置背景图片不重复 */
+				background-repeat: no-repeat;
+			}
+			
+			.btn:hover {
+				/* 设置按钮背景图片 */
+				background-image: url(img/btn/hover.png);
+			}
+			
+			.btn:active {
+				/* 设置按钮背景图片 */
+				background-image: url(img/btn/active.png);
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 创建一个超链接 -->
+		<a class="btn" href="#"></a>
+	</body>
+</html>

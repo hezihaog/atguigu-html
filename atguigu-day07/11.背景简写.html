@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>11.背景简写</title>
+		<style type="text/css">
+			body {
+				height: 5000px;
+				/* 设置一个背景颜色 */
+				background-color: #bfa;
+				/* 设置一个背景图片 */
+				/* background-image: url(img/3.png); */
+				/* 设置背景不重复 */
+				/* background-repeat: no-repeat; */
+				/* 设置背景图片的位置 */
+				/* background-position: center center; */
+				/* 设置背景图片不随滚动条滚动 */
+				/* background-attachment: fixed; */
+				
+				/* 
+					一个个写太麻烦，使用background简写属性
+						- 通过该样式，可以同时设置所有背景相关的属性
+						- 没有顺序要求，谁在前，谁在后，都可以
+							也没有数量要求，不写的样式就使用默认值
+				 */
+				background: #bfa url(img/3.png) center center no-repeat fixed;
+			}
+		</style>
+	</head>
+	<body>
+		
+	</body>
+</html>

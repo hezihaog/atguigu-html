@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>02.表格的样式</title>
+		<style type="text/css">
+			table {
+				/* 设置表格的宽度 */
+				width: 300px;
+				/* 设置居中 */
+				margin: 0 auto;
+				/* 设置表格的边框 */
+				/* border: 1px solid black; */
+				/* 
+					table和td单元格之间默认有一个距离
+						通过border-spacing属性可以设置这个距离
+				 */
+				/* border-spacing: 0px; */
+				/* 
+					border-collapse属性，可以用来设置表格的边框合并
+						如果设置了该属性值为collapse，就是边框合并，上边的border-spacing，自动失效
+						因为边框都合并了，设置距离就没有意义了
+				 */
+				border-collapse: collapse;
+				/* 设置背景颜色，整个都一个颜色，不好分辨单元格，应该给单元格设置 */
+				/* background-color: #bfa; */
+			}
+			
+			/* 
+				为单元格设置边框
+			 */
+			td, th {
+				/* 
+					单元格边框，一般设置单元格的边框，表格不设置边框，设置border-collapse为合并，就可以实现单线框表格
+				 */
+				border: 1px solid black;
+			}
+			
+			/* 
+				隔行变色效果
+				nth-child选择器，选中指定行的元素，odd为奇数行，even为偶数行
+				注意：IE8及其以下，不支持nth-child选择器
+			 */
+			tr:nth-child(even) {
+				background-color: #bfa;
+			}
+			
+			/* 
+				鼠标移入到单元行以后，改变颜色
+				注意：IE6不支持a标签以外的元素设置hover、active伪类
+					IE9以上支持
+			 */
+			tr:hover {
+				background-color: #ff0;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- table是一个块元素 -->
+		<table>
+			<tr>
+				<!-- 
+					th，表示表头中的内容
+						用法和td一样，不同的是有一些默认效果，居中和加粗效果
+				 -->
+				<th>学号</th>
+				<th>姓名</th>
+				<th>性别</th>
+				<th>住址</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>孙悟空</td>
+				<td>男</td>
+				<td>花果山</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>猪八戒</td>
+				<td>男</td>
+				<td>高老庄</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>沙和尚</td>
+				<td>男</td>
+				<td>流沙河</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>唐僧</td>
+				<td>男</td>
+				<td>女儿国</td>
+			</tr>
+			
+			<tr>
+				<td>1</td>
+				<td>孙悟空</td>
+				<td>男</td>
+				<td>花果山</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>猪八戒</td>
+				<td>男</td>
+				<td>高老庄</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>沙和尚</td>
+				<td>男</td>
+				<td>流沙河</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>唐僧</td>
+				<td>男</td>
+				<td>女儿国</td>
+			</tr>
+			
+			<tr>
+				<td>1</td>
+				<td>孙悟空</td>
+				<td>男</td>
+				<td>花果山</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>猪八戒</td>
+				<td>男</td>
+				<td>高老庄</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>沙和尚</td>
+				<td>男</td>
+				<td>流沙河</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>唐僧</td>
+				<td>男</td>
+				<td>女儿国</td>
+			</tr>
+			
+			<tr>
+				<td>1</td>
+				<td>孙悟空</td>
+				<td>男</td>
+				<td>花果山</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>猪八戒</td>
+				<td>男</td>
+				<td>高老庄</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>沙和尚</td>
+				<td>男</td>
+				<td>流沙河</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>唐僧</td>
+				<td>男</td>
+				<td>女儿国</td>
+			</tr>
+			
+			<tr>
+				<td>1</td>
+				<td>孙悟空</td>
+				<td>男</td>
+				<td>花果山</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>猪八戒</td>
+				<td>男</td>
+				<td>高老庄</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>沙和尚</td>
+				<td>男</td>
+				<td>流沙河</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>唐僧</td>
+				<td>男</td>
+				<td>女儿国</td>
+			</tr>
+		</table>
+	</body>
+</html>
